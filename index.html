@@ -2,10 +2,12 @@
     <html>
     <head>
       <title>Cronograma</title>
+      
     </head>
     <body>
       <header>
-        <h1>Cronograma de horários 3B-DS</h1>
+        <h1>Cronograma de horários 3B-DS</h1> 
+        
       </header>
       
       <nav>
@@ -16,6 +18,34 @@
         <h2>Conteúdo Principal</h2>
         <p>Segue abaixo cronograma com aulas, atividades, provas e eventos da semana</p>
       </main>
+      
+ 
+</head>
+<body>
+  <script>
+    function exibirMensagem(botao) {
+      var mensagem = document.getElementById("mensagem");
+      var texto = botao.getAttribute("data-mensagem");
+      mensagem.textContent = texto;
+    }
+  </script>
+</head>
+<body>
+ <button onclick="exibirMensagem(this)" data-mensagem="Atividade de matematica, apresentação de josias">Segunda</button> 
+  <button onclick="exibirMensagem(this)" data-mensagem="Prova saepe">Terça</button>
+  <button onclick="exibirMensagem(this)" data-mensagem="Reunião da Formatura">Quarta</button>
+  <button onclick="exibirMensagem(this)" data-mensagem="Interclasse">Quinta</button>
+  <button onclick="exibirMensagem(this)" data-mensagem="Campeonato Clash Royale">Sexta</button>
+
+  <div id="mensagem"></div>
+  <script>
+    function limparMensagens() {
+      var elementoMensagens = document.getElementById("mensagem");
+      elementoMensagens.innerHTML = ""; 
+    }
+  </script>
+  
+  <button onclick="limparMensagens()">Limpar Mensagens</button>
               </main>
               
               <footer>
