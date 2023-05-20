@@ -6,8 +6,12 @@
     </head>
     <body>
       <header>
-        <h1>Cronograma de horários 3B-DS</h1> 
-        
+        <h1>Cronograma de horários 3B-DS</h1>
+        <script>
+        function Mensagem() {
+          alert("Essa Semana Haverá provas ou eventos, verifique os dias correspondentes");
+        }
+      </script>
       </header>
       
       <nav>
@@ -19,9 +23,12 @@
         <p>Segue abaixo cronograma com aulas, atividades, provas e eventos da semana</p>
       </main>
       
+      
+      
  
 </head>
 <body>
+  <button onclick="Mensagem()">Avisos</button>
   <script>
     function exibirMensagem(botao) {
       var mensagem = document.getElementById("mensagem");
