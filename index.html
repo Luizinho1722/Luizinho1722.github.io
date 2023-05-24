@@ -2,7 +2,7 @@
     <html>
     <head>
       <title>Cronograma</title>
-      
+      <link rel="stylesheet" href="styles.css">
     </head>
     <body>
       <header>
@@ -28,7 +28,7 @@
  
 </head>
 <body>
-  <button onclick="Mensagem()">Avisos</button>
+  
   <script>
     function exibirMensagem(botao) {
       var mensagem = document.getElementById("mensagem");
@@ -38,12 +38,48 @@
   </script>
 </head>
 <body>
- <button onclick="exibirMensagem(this)" data-mensagem="Atividade de matematica, apresentação de josias">Segunda</button> 
-  <button onclick="exibirMensagem(this)" data-mensagem="Prova saepe">Terça</button>
-  <button onclick="exibirMensagem(this)" data-mensagem="Reunião da Formatura">Quarta</button>
-  <button onclick="exibirMensagem(this)" data-mensagem="Interclasse">Quinta</button>
-  <button onclick="exibirMensagem(this)" data-mensagem="Campeonato Clash Royale">Sexta</button>
+  <style>
+    *{box-sizing: border-box;}
+      body{font-family: Arial;padding: 10px;background-color: rgb(221, 137, 27);}
+      .header h1 {font-size: 50px;}
 
+      .topnav{overflow: hidden;background-color: #333;}
+      .topnav a{float: left;display: block;
+                color: rgb(207, 141, 34);text-align: center;
+                padding: 14px 16px ;text-decoration: none; }
+       .topnav a:hover{background-color: #ddd;color: black;}         
+</style>
+</head> 
+<div class="topnav">
+  <style>
+    .custom-button {
+      background-color: rgb(68, 0, 255);
+      color: rgb(14, 213, 17);
+      border: none;
+      padding: 10px 20px;
+    }
+  </style>
+  <style>
+    .custom-butto {
+      background-color: rgb(14, 180, 221);
+      color: rgb(210, 228, 17);
+      border: none;
+      padding: 10px 20px;
+    }
+  </style>
+  
+  <button class="custom-butto" onclick="Mensagem()">Avisos</button>
+  
+  <button onclick="exibirMensagem(this)" button class="custom-button" data-mensagem="Atividade de matematica, apresentação de josias">Segunda</button> 
+  <button onclick="exibirMensagem(this)"button class="custom-button" data-mensagem="Prova saepe">Terça</button>
+  <button onclick="exibirMensagem(this)" button class="custom-button"data-mensagem="Reunião da Formatura">Quarta</button>
+  <button onclick="exibirMensagem(this)" button class="custom-button"data-mensagem="Interclasse">Quinta</button>
+  <button onclick="exibirMensagem(this)" button class="custom-button"data-mensagem="Campeonato Clash Royale">Sexta</button>
+  <button onclick="limparMensagens()"button class="custom-button">Limpar Mensagens</button>
+
+</div>
+
+ 
   <div id="mensagem"></div>
   <script>
     function limparMensagens() {
@@ -52,134 +88,142 @@
     }
   </script>
   
-  <button onclick="limparMensagens()">Limpar Mensagens</button>
+ 
               </main>
               
               <footer>
-                <p><table>
-                    <tr>
-                      <th></th>
-                      <th> Segunda </th>
-                      <th>Terça</th>
-                      <th>Quarta</th>
-                      <th>Quinta</th>
-                      <th>Sexta</th>
-                    </tr>
-                    <tr>
-                      <td>7:30 / 8:20 </td>
-                
-                      <td> |Matemática (Sala 8) </td>
-                      <td>Biologia (Sala 11)  </td>
-                      <td>Português (Sala 3) </td>
-                      <td>Português (Sala 3) </td>
-                      <td>ESTD (Sala7) 
-                        
-                        
-                    </td>
-                    </tr>
-                    <tr>
-                      <td>8:20 / 9:10</td>
-                      <td>|Matemática (Sala 8)       </td>
-                      <td> Biologia (Sala 11) </td>
-                    <td>Português (Sala 3) </td>
-                    <td>Português (Sala 3) </td>
-                    <td>Biologia (Sala 11) </td>
-                    </tr>
-                    <tr>
-                        <td>9:10 / 9:30 </td>
-                  
-                        <td>  |Intervalo (Manhã)   </td>
-                        <td>Intervalo  (Manhã)    </td>
-                        <td>Intervalo   (Manhã)   </td>
-                        <td>Intervalo   (Manhã)   </td>
-                        <td>Intervalo   (Manhã)    </td>
-                      </tr>
-                      <tr>
-                        <td> 9:30 / 10:20 </td>
-                  
-                        <td> |Inglês (Sala 1)  </td>
-                        <td>Matemática (Sala 8) </td>
-                        <td>Matemática (Sala 8) </td>
-                        <td>Matemática (Sala 8) </td>
-                        <td>Matemática (Sala 8)  </td>
-                      </tr>
-                      <tr>
-                        <td>10:20 / 11:10 </td>
-                  
-                        <td>|Geografia (Sala 14)  </td>
-                        <td>História (Sala 14) </td>
-                        <td>Química (Sala 13) </td>
-                        <td>PI (Sala 7) </td>
-                        <td>DI (Lab 1)  </td>
-                      </tr>
-                      <tr>
-                        <td>11:10 / 12:00 </td>
-                  
-                        <td>  |Geografia (Sala 14)  </td>
-                        <td>História (Sala 14) </td>
-                        <td>Química (Sala 13) </td>
-                        <td>PI (Sala 7) </td>
-                        <td>DI (Lab 1) </td>
-                      </tr>
-                      <tr>
-                        <td>12:00 / 13:20 </td>
-                  
-                        <td> |Intervalo (Almoço)  </td>
-                        <td>Intervalo (Almoço) </td>
-                        <td>Intervalo (Almoço) </td>
-                        <td>Intervalo (Almoço)</td>
-                        <td>Intervalo (Almoço) </td>
-                      </tr>
-                      <tr>
-                        <td>13:20 / 14:10 </td>
-                  
-                        <td> |Física (Sala 10)  </td>
-                        <td>Português (Sala 3) </td>
-                        <td>Filosofia (Sala 15) </td>
-                        <td>PNT (Lab 1) </td>
-                        <td>Química (Sala 13)  </td>
-                      </tr>
-                      <tr>
-                        <td>14:10 / 15:00 </td>
-                  
-                        <td>  |Física (Sala 10)   </td>
-                        <td>Português (Sala 3) </td>
-                        <td>Sociologia (Sala 15) </td>
-                        <td>PNT (Lab 1)</td>
-                        <td>Arte (Sala 3) </td>
-                      </tr>
-                      <tr>
-                        <td>15:00 / 15:20 </td>
-                  
-                        <td>  |Intervalo (Tarde) </td>
-                        <td>Intervalo (Tarde)</td>
-                        <td>Intervalo (Tarde)</td>
-                        <td>Intervalo (Tarde)</td>
-                        <td>Intervalo (Tarde)</td>
-                      </tr>
-                      <tr>
-                        <td>15:20 / 16:10 </td>
-                  
-                        <td>  |DI (Lab 1) </td>
-                        <td>Física (Sala 10) </td>
-                        <td>AMD (Lab 1) </td>
-                        <td>ESTD (Lab 1) </td>
-                        <td>Ed.Física (Sala 2) </td>
-                      </tr>
-                      <tr>
-                        <td>16:10 / 17:00 </td>
-                  
-                        <td>  |DI (Lab 1)  </td>
-                        <td>Física (Sala 10) </td>
-                        <td>AMD (Lab 1) </td>
-                        <td>Inglês (Sala 1) </td>
-                        <td>Ed.Física (Sala 2)  </td>
-                      </tr>
+            
 
-                  </table>
-                    
-                    </p>
-              </footer>
-      </footer>
-    </body>
-    </html>  
+                <style>
+                  table {
+                    border-collapse: collapse;
+                    width: 100%;
+                  }
+                
+                  th, td {
+                    border: 1px solid #ddd;
+                    padding: 8px;
+                    text-align: center;
+                  }
+                
+                  th {
+                    background-color: #f2f2f2;
+                  }
+                </style>
+                
+                  
+                <style>
+                  table {
+                    border-collapse: collapse;
+                    width: 100%;
+                  }
+                
+                  th, td {
+                    border: 1px solid #ddd;
+                    padding: 8px;
+                    text-align: center;
+                  }
+                
+                  th {
+                    background-color: #f2f2f2;
+                  }
+                </style>
+                <style>
+                  th {
+                    background-color: rgb(0, 255, 110);
+                    color: rgb(212, 33, 33);
+                  }
+                </style>
+                <table>
+                  <tr>
+                    <th>Hora</th>
+                    <th>Segunda-Feira</th>
+                    <th>Terça-Feira</th>
+                    <th>Quarta-Feira</th>
+                    <th>Quinta-Feira</th>
+                    <th>Sexta-Feira</th>
+                  </tr>
+                  <tr>
+                    <td>7:30 - 8:20</td>
+                    <td rowspan="2">Matemática<br>Walter – Sala 08</td>
+                    <td>Biologia<br>Adriana – Sala 11</td>
+                    <td rowspan="2">Português<br>Ígaro – Sala 03</td>
+                    <td rowspan="2">Português<br>Ígaro – Sala 03</td>
+                    <td>Estudo Dirigido<br>Josias – Sala 07</td>
+                  </tr>
+                  <tr>
+                    <td>8:20 - 9:10</td>
+                    <td>Biologia<br>Adriana – Sala 11</td>
+                    <td>Biologia<br>Adriana – Sala 11</td>
+                  </tr>
+                  <tr>
+                    <td>9:10 - 9:30</td>
+                    <td colspan="5">Intervalo - Manhã</td>
+                  </tr>
+                  <tr>
+                    <td>9:30 - 10:20</td>
+                    <td>Inglês<br>Rafael – Sala 01</td>
+                    <td rowspan="1">Matemática<br>Walter – Sala 08</td>
+                    <td rowspan="1">Matemática<br>Walter – Sala 08</td>
+                    <td rowspan="1">Matemática<br>Walter – Sala 08</td>
+                    <td rowspan="1">Matemática<br>Walter – Sala 08</td>
+                  </tr>
+                  <tr>
+                    <td>10:20 - 11:10</td>
+                    <td>Geografia<br>Goretti – Sala 14</td>
+                    <td>Historia<br> Cícero – Sala 14</td>
+                    <td>Química<br> Ancelmo – Sala 13 </td>
+                    <td>PI<br>Neiton – Sala 7 </td>
+                    <td>DI<br>Neiton – Lab 1</td>
+                  </tr>
+                  <tr>
+                    <td>11:10 - 12:00</td>
+                    <td>Geografia<br>Goretti – Sala 14</td>
+                    <td>Historia<br> Cícero – Sala 14</td>
+                    <td>Química<br> Ancelmo – Sala 13 </td>
+                    <td>PI<br>Neiton – Sala 7 </td>
+                    <td>DI<br>Neiton – Lab 1</td>
+                  </tr>
+                  <tr>
+                    <td>12:00 - 13:20</td>
+                    <td colspan="5">Almoço</td>
+                  </tr>
+                  <tr>
+                    <td>13:20 - 14:10</td>
+                    <td>Física<br>Karina – Sala 10</td>
+                    <td>Português<br>Ígaro – Sala 03</td>
+                    <td>Filosofia<br>Cleiber – Sala 15</td>
+                    <td>P.N.T.<br>Josias – Lab 01</td>
+                    <td>Química<br>Ancelmo – Sala 13</td>
+                  </tr>
+                  <tr>
+                    <td>14:10 - 15:00</td>
+                    <td>Física<br>Karina – Sala 10</td>
+                    <td>Português<br>Ígaro – Sala 03</td>
+                    <td>Sociologia<br>Cleiber – Sala 15</td>
+                    <td>P.N.T.<br>Josias – Lab 01</td>
+                    <td>Arte<br>Conceição – Sala 03</td>
+                  </tr>
+                  <tr>
+                    <td>15:00 - 15:20</td>
+                    <td colspan="5">Intervalo - Tarde</td>
+                  </tr>
+                  <tr>
+                    <td>15:20 - 16:10</td>
+                    <td>Design de Interface 2<br>Neiton – Lab 01</td>
+                    <td>Física<br>Karina – Sala 10</td>
+                    <td>Administração de Dados<br>Josias – Lab 1</td>
+                    <td>Estudo Dirigido<br>Josias – Lab 01</td>
+                    <td>Ed. Física<br>Jéssica - Sala 02</td>
+                  </tr>
+                  <tr>
+                    <td>16:10 - 17:00</td>
+                    <td>Design de Interface 2<br>Neiton – Lab 01</td>
+                    <td>Física<br>Karina – Sala 10</td>
+                    <td>Administração de Dados<br>Josias – Lab 1</td>
+                    <td>Inglês<br>Rafael – Sala 01</td>
+                    <td>Ed. Física<br>Jéssica - Sala 02</td>
+                  </tr>
+                </table>
+                
+  
