@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .link-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .link-button:hover {
+            background-color: #0056b3;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            background: linear-gradient(45deg, red, blue, green);
+            background-size: 200% 200%;
+            animation: gradientAnimation 10s ease infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .container {
+            max-width: 800px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="window.location.href='index.html'" class="link-button">Voltar</button>
+    <div class="container">
+        <h1>Biografia</h1>
+        <h2>Somos uma dupla de estudantes, Luiz Paulo e Gabriel Calado da ETE Ginasio Pernambucano, que com o auxílio de inteligência artificial, da nossa orientadora e das nossas habilidades de desenvolver um sistema, criamos um aplicativo no App Inventor. A sua função é levar para um site que nós criamos com o objetivo de ajudar a nossa turma a se organizar diante de eventos, provas, trabalhos e as aulas da semana.</h2>
+    </div>
+</body>
+</html>
+
